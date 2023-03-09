@@ -1,6 +1,7 @@
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import restaurants from "../../../assets/data/restaurants.json";
-import { Fontisto } from "@expo/vector-icons";;
+import { Fontisto } from "@expo/vector-icons";
+import DishListItem from "../../components/DishListItem";
 
 const restaurant = restaurants[0];
 
@@ -27,6 +28,8 @@ const RestaurantDetailsPage = () => {
           {restaurant.maxDeliveryTime} minutes
         </Text>
       </View>
+      <DishListItem dish={restaurant.dishes[0]} />
+      <DishListItem dish={restaurant.dishes[2]} />
     </View>
   );
 };
@@ -36,7 +39,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 40,
         left: 15,
-    borderRadius: 50,
   },
   page: {
     flex: 1,
@@ -44,7 +46,8 @@ const styles = StyleSheet.create({
 
   image: {
     width: "100%",
-    aspectRatio: 5 / 3,
+      aspectRatio: 5 / 3,
+    // borderRadius: 20,
   },
   title: {
     fontSize: 35,
