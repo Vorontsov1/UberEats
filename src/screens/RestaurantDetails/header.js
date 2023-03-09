@@ -2,24 +2,27 @@ import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import restaurants from "../../../assets/data/restaurants.json";
 import { Fontisto } from "@expo/vector-icons";
 import DishListItem from "../../components/DishListItem";
-import Header from "./header";
 
 const restaurant = restaurants[0];
 
 const RestaurantDetailsPage = () => {
   return (
     <View style={styles.page}>
-      <FlatList
-        ListHeaderComponent={Header}
-        data={restaurant.dishes}
-        renderItem={({ item }) => <DishListItem dish={item} />}
+      <Image
+        source={{ uri: restaurant.image }}
+        style={styles.image}
+        resizeMode="cover"
       />
-      <Fontisto
-        name="backward"
-        size={25}
-        color="white"
-        style={styles.iconContainer}
-      />
+
+   
+
+      <View style={styles.container}>
+        <Text style={styles.title}>{restaurant.name}</Text>
+        <Text style={styles.subtitle}>
+          $ {restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime} -
+          {restaurant.maxDeliveryTime} minutes
+        </Text>
+      </View>
     </View>
   );
 };
