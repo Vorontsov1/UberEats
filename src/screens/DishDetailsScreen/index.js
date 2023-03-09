@@ -16,6 +16,9 @@ const DishDetailsScreen = () => {
   const onPlus = () => {
     setQuantity(quantity + 1);
   };
+    const getTotal = () => {
+        return (dish.price * quantity).toFixed(2);
+    }
 
   return (
     <View style={styles.page}>
@@ -50,7 +53,9 @@ const DishDetailsScreen = () => {
         </TouchableOpacity>
           </View>
           <View style={styles.button}>
-              <Text style={styles.buttonText}>Add {quantity} to backet</Text>
+              <Text style={styles.buttonText}>
+                  Add {quantity} to backet (${getTotal()})
+              </Text>
           </View>
     </View>
   );
