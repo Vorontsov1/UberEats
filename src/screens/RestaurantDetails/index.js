@@ -1,16 +1,25 @@
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import restaurants from "../../../assets/data/restaurants.json";
+import { Ionicons } from '@expo/vector-icons';
 
 const restaurant = restaurants[0];
 
 const RestaurantDetailsPage = () => {
   return (
-    <View style={styles.page}>
+    < View style={styles.page}>
       <Image
         source={{ uri: restaurant.image }}
         style={styles.image}
         resizeMode="cover"
       />
+      
+        <Ionicons
+          name="arrow-back-circle"
+          size={65}
+          color="white"
+         style={styles.iconContainer} />
+      
+
       <View style={styles.container}>
         <Text style={styles.title}>{restaurant.name}</Text>
         <Text style={styles.subtitle}>
@@ -23,6 +32,12 @@ const RestaurantDetailsPage = () => {
 };
 
 const styles = StyleSheet.create({
+  iconContainer: {
+        position: 'absolute',
+        top: 40,
+        left: 15,
+    borderRadius: 50,
+  },
   page: {
     flex: 1,
   },
@@ -41,10 +56,10 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#525252",
     margin: 10,
-    },
-    container: {
-      margin: 10,
-  }
+  },
+  container: {
+    margin: 10,
+  },
 });
 
 export default RestaurantDetailsPage;
