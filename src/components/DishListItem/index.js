@@ -19,8 +19,8 @@ const DishListItem = ({ dish }) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomColor: "lighgrey",
-    borderBottomWidth: 1,
+    borderBottomColor: "#576319",
+    borderBottomWidth: 3,
     marginHorizontal: 23,
     paddingVertical: 13,
     flexDirection: "row",
