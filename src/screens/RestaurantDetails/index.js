@@ -1,24 +1,24 @@
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import restaurants from "../../../assets/data/restaurants.json";
-import { Ionicons } from '@expo/vector-icons';
+import { Fontisto } from "@expo/vector-icons";;
 
 const restaurant = restaurants[0];
 
 const RestaurantDetailsPage = () => {
   return (
-    < View style={styles.page}>
+    <View style={styles.page}>
       <Image
         source={{ uri: restaurant.image }}
         style={styles.image}
         resizeMode="cover"
       />
-      
-        <Ionicons
-          name="arrow-back-circle"
-          size={65}
-          color="white"
-         style={styles.iconContainer} />
-      
+
+      <Fontisto
+        name="backward"
+        size={25}
+        color="white"
+        style={styles.iconContainer}
+      />
 
       <View style={styles.container}>
         <Text style={styles.title}>{restaurant.name}</Text>
