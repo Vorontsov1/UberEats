@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import restaurants from "../../../assets/data/restaurants.json";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -23,19 +23,31 @@ const DishDetailsScreen = () => {
       <Text style={styles.description}>{dish.description}</Text>
       <View style={styles.separator} />
       <View style={styles.row}>
-        <AntDesign
-          name="minuscircleo"
-          size={60}
-          color="#EC9704"
+        <TouchableOpacity
+          style={styles.iconContainer}
           onPress={onMinus}
-        />
+          activeOpacity={0.5}
+        >
+          <AntDesign
+            name="minuscircleo"
+            size={60}
+            color="#EC9704"
+            style={styles.icon}
+          />
+        </TouchableOpacity>
         <Text style={styles.quantity}>{quantity}</Text>
-        <AntDesign
-          name="pluscircleo"
-          size={60}
-          color="#EC9704"
+        <TouchableOpacity
+          style={styles.iconContainer}
           onPress={onPlus}
-        />
+          activeOpacity={0.5}
+        >
+          <AntDesign
+            name="pluscircleo"
+            size={60}
+            color="#EC9704"
+            style={styles.icon}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
