@@ -48,7 +48,10 @@ const DishDetailsScreen = () => {
             style={styles.icon}
           />
         </TouchableOpacity>
-      </View>
+          </View>
+          <View style={styles.button}>
+              <Text style={styles.buttonText}>Add {quantity} to backet</Text>
+          </View>
     </View>
   );
 };
@@ -84,6 +87,19 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginHorizontal: 20,
     color: "#BC0000",
+  },
+  button: {
+      backgroundColor: "#68904D",
+      marginTop: 'auto',
+      padding: 20,
+      alignItems: 'center',
+      borderRadius: 50,
+  },
+    buttonText: {
+        color: 'white',
+        fontWeight: '600',
+        fontSize: 18,
+        letterSpacing: 0.7,
   },
 });
 
