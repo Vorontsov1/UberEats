@@ -1,41 +1,38 @@
 import { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import restaurants from "../../../assets/data/restaurants.json";
-
 
 const restaurant = restaurants[0];
 
-const BasketDishItem = () => {
+const BasketDishItem = ({ basketDish }) => {
   return (
     <View style={styles.row}>
       <View style={styles.quantityContainer}>
         <Text>1</Text>
       </View>
-      <Text style={{ fontWeight: "700" }}>Name</Text>
-      <Text style={{ marginLeft: "auto" }}>$12</Text>
+      <Text style={{ fontWeight: "700" }}>{basketDish.name}</Text>
+      <Text style={{ marginLeft: "auto" }}>${basketDish.price}</Text>
     </View>
   );
-}
-
+};
 
 const Basket = () => {
   const [quantity, setQuantity] = useState(1);
 
-return (
+  return (
     <View style={styles.page}>
       <Text style={styles.name}>{restaurant.name}</Text>
 
       <Text>Your items</Text>
-     
-  
 
-
+      <FlatList
+        data={restaurant.dishes}
+        renderItem={({ item }) => <BasketDishItem basketDish={item} />}
+      />
       <View style={styles.separator} />
-     
+
       <View style={styles.button}>
-        <Text style={styles.buttonText}>
-          Create Order
-        </Text>
+        <Text style={styles.buttonText}>Create Order</Text>
       </View>
     </View>
   );
