@@ -17,18 +17,18 @@ const BasketDishItem = ({ basketDish }) => {
 };
 
 const Basket = () => {
-  const [quantity, setQuantity] = useState(1);
 
   return (
     <View style={styles.page}>
       <Text style={styles.name}>{restaurant.name}</Text>
 
-      <Text>Your items</Text>
+      <Text style={styles.textItems}>Your items</Text>
 
       <FlatList
         data={restaurant.dishes}
         renderItem={({ item }) => <BasketDishItem basketDish={item} />}
       />
+
       <View style={styles.separator} />
 
       <View style={styles.button}>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 50,
+    marginVertical: 15,
   },
   quantity: {
     fontSize: 25,
@@ -88,6 +88,12 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     borderRadius: 50,
     marginRight: 10,
+  },
+  textItems: {
+    fontWeight: "bold",
+    marginTop: 20,
+    letterSpacing: 0.8,
+    fontSize: 19,
   },
 });
 
