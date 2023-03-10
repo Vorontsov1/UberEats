@@ -18,7 +18,7 @@ return (
       <View style={styles.quantityContainer}>
         <Text>1</Text>
       </View>
-      <Text>Name</Text>
+      <Text style={{fontWeight:'700'}}>Name</Text>
       <Text style={{marginLeft:'auto'}}>$12</Text>
       </View>
 
@@ -81,8 +81,9 @@ const styles = StyleSheet.create({
   quantityContainer: {
     backgroundColor: "#DA6A00",
     paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 50,
-    marginRight: 5,
+    marginRight: 10,
   },
 });
 
