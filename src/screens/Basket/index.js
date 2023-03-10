@@ -8,12 +8,19 @@ const restaurant = restaurants[0];
 const Basket = () => {
   const [quantity, setQuantity] = useState(1);
 
-
-
-
-  return (
+return (
     <View style={styles.page}>
       <Text style={styles.name}>{restaurant.name}</Text>
+
+      <Text>Your items</Text>
+     
+    <View>
+      <View style={styles.quantityContainer}>
+        <Text>1</Text>
+      </View>
+      </View>
+
+
       <View style={styles.separator} />
      
       <View style={styles.button}>
@@ -33,7 +40,7 @@ const styles = StyleSheet.create({
     padding: 13,
   },
   name: {
-    fontSize: 30,
+    fontSize: 24,
     fontWeight: "700",
     marginVertical: 10,
   },
