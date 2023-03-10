@@ -13,9 +13,9 @@ export default function App() {
       {/* <HomeScreen /> */}
       {/* <RestaurantDetailsPage /> */}
       {/* <DishDetailsScreen /> */}
-      {/* <Basket /> */}
+      <Basket />
       {/* <OrderScreen /> */}
-      <OrderDetails />
+      {/* <OrderDetails /> */}
 
       <StatusBar style="light" />
     </View>
