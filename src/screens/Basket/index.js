@@ -14,10 +14,12 @@ return (
 
       <Text>Your items</Text>
      
-    <View>
+    <View style={styles.row}>
       <View style={styles.quantityContainer}>
         <Text>1</Text>
       </View>
+      <Text>Name</Text>
+      <Text style={{marginLeft:'auto'}}>$12</Text>
       </View>
 
 
@@ -56,7 +58,6 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
     marginTop: 50,
   },
   quantity: {
@@ -76,6 +77,12 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontSize: 18,
     letterSpacing: 0.7,
+  },
+  quantityContainer: {
+    backgroundColor: "#DA6A00",
+    paddingHorizontal: 10,
+    borderRadius: 50,
+    marginRight: 5,
   },
 });
 
