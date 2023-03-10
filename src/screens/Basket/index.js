@@ -5,6 +5,19 @@ import restaurants from "../../../assets/data/restaurants.json";
 
 const restaurant = restaurants[0];
 
+const BasketDishItem = () => {
+  return (
+    <View style={styles.row}>
+      <View style={styles.quantityContainer}>
+        <Text>1</Text>
+      </View>
+      <Text style={{ fontWeight: "700" }}>Name</Text>
+      <Text style={{ marginLeft: "auto" }}>$12</Text>
+    </View>
+  );
+}
+
+
 const Basket = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -14,13 +27,7 @@ return (
 
       <Text>Your items</Text>
      
-    <View style={styles.row}>
-      <View style={styles.quantityContainer}>
-        <Text>1</Text>
-      </View>
-      <Text style={{fontWeight:'700'}}>Name</Text>
-      <Text style={{marginLeft:'auto'}}>$12</Text>
-      </View>
+  
 
 
       <View style={styles.separator} />
