@@ -11,7 +11,7 @@ const BasketDishItem = ({ basketDish }) => {
         <Text>1</Text>
       </View>
       <Text style={{ fontWeight: "700" }}>{basketDish.name}</Text>
-      <Text style={{ marginLeft: "auto" }}>${basketDish.price}</Text>
+      <Text style={{ marginLeft: "auto" }}>$ {basketDish.price}</Text>
     </View>
   );
 };
@@ -27,6 +27,7 @@ const Basket = () => {
       <FlatList
         data={restaurant.dishes}
         renderItem={({ item }) => <BasketDishItem basketDish={item} />}
+        
       />
 
       <View style={styles.separator} />
