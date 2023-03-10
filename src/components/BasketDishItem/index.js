@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginVertical: 15,
-    marginRight: 40,
-    marginLeft: 40,
+    marginRight: 15,
+    marginLeft: 15,
   },
   quantityContainer: {
     backgroundColor: "#DA6A00",
