@@ -4,13 +4,14 @@ import { Ionicons } from "@expo/vector-icons";
 import DishListItem from "../../components/DishListItem";
 import Header from "./header";
 import styles from './styles';
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 
 
 const restaurant = restaurants[0];
 
 const RestaurantDetailsPage = () => {
   const route = useRoute();
+  const navigation = useNavigation();
  
 
   const id = route.params?.id;
@@ -26,6 +27,7 @@ const RestaurantDetailsPage = () => {
         />}
       />
       <Ionicons
+        onPress={() => navigation.goBack()}
         name="ios-chevron-back-circle-sharp"
         size={45}
         color="white"
