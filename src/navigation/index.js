@@ -9,7 +9,7 @@ import OrderDetails from "../screens/OrderDetails";
 import { Ionicons } from '@expo/vector-icons';
 import { Fontisto } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { StyleSheet } from 'react-native';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -32,9 +32,9 @@ const Tab = createMaterialBottomTabNavigator();
 const HomeTabs = () => {
   return (
     <Tab.Navigator
-      barStyle={styles.tabBarStyle}
-      // activeColor="#FDB10B"
-      // inactiveColor="#FD292F"
+      activeColor="#DC4B48"
+      inactiveColor="#5BA0BF"
+      barStyle={{ backgroundColor: "#85BB4D" }}
     >
       <Tab.Screen
         name="Home"
@@ -66,11 +66,5 @@ const HomeTabs = () => {
     </Tab.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  tabBarStyle: {
-    backgroundColor: "#A0C4DC", // replace with any color of your choice
-  },
-});
 
 export default HomeTabs;
