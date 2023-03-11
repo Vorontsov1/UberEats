@@ -42,7 +42,7 @@ const HomeTabs = () => {
       />
       <Tab.Screen
         name="Order"
-        component={OrderScreen}
+        component={OrdersStackNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <Fontisto name="shopping-basket" size={24} color={color} />
@@ -73,6 +73,17 @@ const HomeStackNavigator = () => {
       <HomeStack.Screen name="Basket" component={Basket} />
     </HomeStack.Navigator>
   );
-}
+};
+
+const OrdersStack = createNativeStackNavigator();
+
+const OrdersStackNavigator = () => {
+  return (
+    <OrdersStack.Navigator>
+      <OrdersStack.Screen name="Orders" component={OrderScreen} />
+      <OrdersStack.Screen name="Order" component={OrderDetails} />
+    </OrdersStack.Navigator>
+  );
+};
 
 export default RootNavigator;
