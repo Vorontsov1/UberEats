@@ -8,7 +8,7 @@ import OrderScreen from "../screens/OrdersScreen";
 import OrderDetails from "../screens/OrderDetails";
 import { Ionicons } from '@expo/vector-icons';
 import { Fontisto } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { StyleSheet } from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -50,7 +50,7 @@ const HomeTabs = () => {
         component={OrderScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Fontisto name="shopping-basket" size={24} color="black" />
+            <Fontisto name="shopping-basket" size={24} color={color} />
           ),
         }}
       />
@@ -59,7 +59,7 @@ const HomeTabs = () => {
         component={OrderScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <AntDesign name="profile" size={24} color="black" />
+            <FontAwesome5 name="user-alt" size={24} color={color} />
           ),
         }}
       />
