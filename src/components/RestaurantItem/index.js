@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     width: "100%",
     aspectRatio: 5 / 3,
     marginBottom: 5,
+    borderRadius: 20,
   },
   title: {
     fontSize: 16,
