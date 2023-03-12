@@ -12,7 +12,7 @@ const Profile = () => {
   const onSave = () => {};
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Profile</Text>
       <TextInput
         value={name}
@@ -51,6 +51,10 @@ const Profile = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    backgroundColor: "#aac3bd",
+  },
   title: {
     fontSize: 30,
     fontWeight: "bold",

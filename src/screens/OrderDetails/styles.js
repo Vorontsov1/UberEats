@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
+  container: {},
   iconContainer: {
     position: "absolute",
     top: 40,
     left: 15,
-    
   },
   page: {
     flex: 1,
