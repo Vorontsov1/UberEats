@@ -39,10 +39,13 @@ const Profile = () => {
         placeholder="Longitude"
         style={styles.input}
       />
-      <Button onPress={onSave} title="Save" />
-      <Text
-        onPress={() => Auth.signOut()}
-        style={{ textAlign: 'center', color: 'red', margin: 10, }}>Sing Out</Text>
+      <View style={styles.buttonContainer}>
+        <Button onPress={onSave} title="Save" />
+      </View>
+      
+      <View style={styles.buttonContainer}>
+        <Button onPress={() => Auth.signOut()} title="Sing Out" />
+     </View>
     </SafeAreaView>
   );
 };
@@ -58,9 +61,14 @@ const styles = StyleSheet.create({
     margin: 10,
     backgroundColor: "#fecf50",
     padding: 15,
-    borderRadius: 5,
+    borderRadius: 20,
   },
-
+  buttonContainer: {
+    backgroundColor: "#ff9b21",
+    margin: 10,
+    padding: 10,
+    borderRadius: 50,
+  },
 });
 
 export default Profile;
