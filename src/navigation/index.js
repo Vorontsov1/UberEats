@@ -5,10 +5,10 @@ import RestaurantDetailsPage from "../screens/RestaurantDetails";
 import DishDetailsScreen from "../screens/DishDetailsScreen";
 import Basket from "../screens/Basket";
 import OrderScreen from "../screens/OrdersScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 import OrderDetails from "../screens/OrderDetails";
-import { Ionicons } from '@expo/vector-icons';
-import { Fontisto } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { Ionicons, Fontisto, FontAwesome5 } from "@expo/vector-icons";
+
 
 
 const Stack = createNativeStackNavigator();
@@ -51,7 +51,7 @@ const HomeTabs = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={OrderScreen}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="user-alt" size={24} color={color} />
