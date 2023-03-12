@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingVertical: 40, //temp fix
     padding: 13,
+    backgroundColor: "#fecf50",
   },
   name: {
     fontSize: 24,

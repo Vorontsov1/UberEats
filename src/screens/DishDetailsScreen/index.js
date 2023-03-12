@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingVertical: 40, //temp fix
     padding: 13,
+    backgroundColor: "#fecf50",
   },
   name: {
     fontSize: 30,
@@ -96,17 +97,17 @@ const styles = StyleSheet.create({
     color: "#BC0000",
   },
   button: {
-      backgroundColor: "#68904D",
-      marginTop: 'auto',
-      padding: 20,
-      alignItems: 'center',
-      borderRadius: 50,
+    backgroundColor: "#68904D",
+    marginTop: "auto",
+    padding: 20,
+    alignItems: "center",
+    borderRadius: 50,
   },
-    buttonText: {
-        color: 'white',
-        fontWeight: '600',
-        fontSize: 18,
-        letterSpacing: 0.7,
+  buttonText: {
+    color: "white",
+    fontWeight: "600",
+    fontSize: 18,
+    letterSpacing: 0.7,
   },
 });
 

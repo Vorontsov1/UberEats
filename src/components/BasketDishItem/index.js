@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   quantityContainer: {
-    backgroundColor: "#DA6A00",
+    backgroundColor: "#fecf50",
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 50,
